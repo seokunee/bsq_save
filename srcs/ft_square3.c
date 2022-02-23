@@ -18,8 +18,8 @@ int	**make_map(char **map, char *value)
 	int	w_max;
 	int	**map_arr;
 
-	h_max = ft_map_height(map);
-	w_max = ft_map_width(map);
+	h_max = ft_map_height(map) + ft_map_width(map);
+	w_max = ft_map_width(map) + ft_map_height(map);
 	map_arr = create_map(h_max, w_max);
 	if (!map_arr)
 		return (0);

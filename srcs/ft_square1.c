@@ -71,17 +71,18 @@ void	fill_one_zero(int **fill, char **map, char *value)
 	int	i;
 	int	j;
 
-	i = -1;
-	while (map[++i] != 0)
+	i = 0;
+
+	while (map[i])
 	{
-		j = -1;
-		while (map[i][++j] != 0)
+		j = 0;
+		while (map[i][j])
 		{
 			if (map[i][j] == value[0])
 				fill[i][j] = 1;
-			else if (map[i][j] == value[1])
-				fill[i][j] = 0;
+			j++;
 		}
+		i++;
 	}
 }
 
@@ -97,9 +98,7 @@ void	ft_printing(char **map, char *value, int x)
 	{
 		j = -1;
 		while (++j < answer.size)
-		{
 			map[answer.x + i][answer.y + j] = value[2];
-		}
 	}
 	i = -1;
 	while (map[++i])
