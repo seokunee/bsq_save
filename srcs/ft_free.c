@@ -17,7 +17,7 @@ void	free_int_arr(int **to_free, char **map)
 	int	i;
 
 	i = 0;
-	while (i < ft_map_height(map))
+	while (i < ft_map_height(map) + ft_map_width(map))
 	{
 		free(to_free[i]);
 		i++;

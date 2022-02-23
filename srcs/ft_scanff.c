@@ -12,9 +12,6 @@
 
 #include "bsq.h"
 
-void	pppp(char *buf);
-
-
 char	*ft_scanff(void)
 {
 	int		count;
@@ -33,20 +30,5 @@ char	*ft_scanff(void)
 	while (buff[++count])
 		str[count] = buff[count];
 	str[count] = 0;
-	// pppp(str);
 	return (str);
-}
-
-void	pppp(char *buf)
-{
-	int	i;
-
-	i = 0;
-	write(1, "\n", 1);
-	while (buf[i])
-	{
-		write(1, &buf[i], 1);
-		i++;
-	}
-	write(1, "\n", 1);
 }
